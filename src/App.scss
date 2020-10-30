@@ -1,0 +1,23 @@
+// Web Imports
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+
+// Local Imports
+@import "~bootstrap/scss/bootstrap";
+
+
+// Brand and subhead
+.cs_brand {
+  font-family: "Bellefair";
+  font-weight: 100 !important;
+  font-size: 60px;
+  text-align: center;
+  display: block;
+  cursor: default;
+}
+
+.cs_subhead {
+  cursor: default;
+  text-align: center;
+  font-weight: 500;
+}

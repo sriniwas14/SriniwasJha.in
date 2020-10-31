@@ -1,5 +1,6 @@
 // Web Imports
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 
 // Local Imports
@@ -7,10 +8,14 @@
 
 // Variables
 
-$bodyBackground: #f6f6f6;
+$bodyBackground: #e5e5e5;
 $primaryColor: #ff796b;
 $sectionLightBg : #ffffff;
 $sectionDarkBg : #242a2d;
+
+.badge-primary {
+  background-color: $primaryColor !important;
+}
 
 .bg-custom-primary {
   background-color: $primaryColor !important;
@@ -60,6 +65,9 @@ p {
 
   &.light {
     background: $sectionLightBg;
+    .cs_ProjectCard:hover {
+      border-color:#d4d4d4;
+    }
     .cs_Headline {
       border-bottom: 1px solid #eee;
     }
@@ -69,6 +77,14 @@ p {
   }
   &.dark {
     background-color: $sectionDarkBg;
+    color: white;
+    .cs_ProjectCard:hover {
+      border-color:#5c5c5c;
+    }
+    h3,h4 {
+      font-family: "Oswald";
+      margin-top: 10px;
+    }
     .cs_Headline {
       color: white;
       border-bottom: 1px solid #5b5b5b;
@@ -77,4 +93,26 @@ p {
       color: white;
     }
   }
+}
+
+// Project Cards
+
+.cs_ProjectCard {
+  padding: 8px;
+  border: 1px solid transparent;
+  transition: 0.2s ease-out;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid;
+    transition: 0.2s ease-in;
+    transform: scale(1.02);
+  }
+  img {
+    border-radius: 5px;
+  }
+}
+
+.cs_ProjectCard_details {
+  margin: 10px 0;
 }

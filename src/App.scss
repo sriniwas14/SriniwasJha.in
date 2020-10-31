@@ -95,7 +95,15 @@ p {
   }
 }
 
-// Project Cards
+// Project Scroller and Card
+
+.cs_ProjectScrollerSlidingArea {
+  width: auto !important;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
 
 .cs_ProjectCard {
   padding: 8px;

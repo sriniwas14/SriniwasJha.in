@@ -7,7 +7,7 @@ import ProjectScroller from './components/elements/ProjectScroller';
 const activeProjects = [
   { projectId: 1, title: "Project One", description: "Lorem Ipsum dolor sit amet", badges: ["Video Game", "Godot", "GDScript"], src: "https://via.placeholder.com/350x200" },
   { projectId: 2, title: "Project Two", description: "Lorem Ipsum dolor sit amet", badges: ["Desktop App", "Java"], src: "https://via.placeholder.com/350x200" },
-  { projectId: 3, title: "Project Three", description: "Lorem Ipsum dolor sit amet", badges: ["Web App", "ReactJs", "NodeJs"], src: "https://via.placeholder.com/350x200" }
+  { projectId: 3, title: "Project Three", description: "Lorem Ipsum dolor sit amet", badges: ["Web App", "ReactJs", "NodeJs"], src: "https://via.placeholder.com/350x200" },
 ]
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
     <div className="App">
       <Header />
 
-      <div class="cs_brand" href="#">Sriniwas<b>Jha</b></div>
-      <div class="cs_subhead">Coder | Gamer | Geek</div>
+      <div className="cs_brand" href="#">Sriniwas<b>Jha</b></div>
+      <div className="cs_subhead">Coder | Gamer | Geek</div>
 
       <br/>
 

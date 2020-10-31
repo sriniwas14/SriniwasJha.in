@@ -5,6 +5,24 @@
 // Local Imports
 @import "~bootstrap/scss/bootstrap";
 
+// Variables
+
+$bodyBackground: #f6f6f6;
+$primaryColor: #ff796b;
+$sectionLightBg : #ffffff;
+$sectionDarkBg : #242a2d;
+
+.bg-custom-primary {
+  background-color: $primaryColor !important;
+}
+
+body {
+  background-color: $bodyBackground;
+}
+
+p {
+  margin: 0 !important;
+}
 
 // Brand and subhead
 .cs_brand {
@@ -20,4 +38,43 @@
   cursor: default;
   text-align: center;
   font-weight: 500;
+}
+
+// Text Sections
+
+.cs_Section {
+  padding: 25px;
+  border-radius: 11px;
+  box-shadow: 0 5px 10px -9px;
+  margin: 10px 0;
+
+  & .cs_Headline {
+    font-family: "Oswald";
+    cursor: default;
+    padding-bottom: 10px;
+  }
+
+  & .cs_Text {
+    cursor: default;
+  }
+
+  &.light {
+    background: $sectionLightBg;
+    .cs_Headline {
+      border-bottom: 1px solid #eee;
+    }
+    .cs_Text {
+      font-family: "Roboto";
+    }
+  }
+  &.dark {
+    background-color: $sectionDarkBg;
+    .cs_Headline {
+      color: white;
+      border-bottom: 1px solid #5b5b5b;
+    }
+    .cs_Text {
+      color: white;
+    }
+  }
 }

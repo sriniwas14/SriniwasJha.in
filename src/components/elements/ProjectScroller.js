@@ -7,8 +7,8 @@ export default function ProjectScroller(props) {
     const [paginationVisible, setPaginationVisible] = useState(true)
 
     const scrollToPosition = (direction) => {
-        let sliderWidth = sliderRef.current.parentElement.scrollWidth;
-        let currentScroll = sliderRef.current.scrollLeft;
+        let sliderWidth = sliderRef.current.parentElement.scrollWidth
+        let currentScroll = sliderRef.current.scrollLeft
 
         if((sliderWidth+currentScroll)===sliderRef.current.scrollWidth){
             sliderRef.current.scrollLeft = 0
@@ -22,7 +22,22 @@ export default function ProjectScroller(props) {
         }
     }
 
-    // Handle Resize event to toggle pagination
+
+    const resizeHandler = () => {
+        if (sliderRef.current.scrollWidth>sliderRef.current.parentElement.scrollWidth){
+            setPaginationVisible(true)
+        } else {
+            setPaginationVisible(false)
+        }
+    }
+    
+    useEffect(() => {
+        window.addEventListener("resize", resizeHandler)
+
+        return () => {
+            window.removeEventListener("resize", resizeHandler)
+        }
+    },[])
 
     return (
         <Row>

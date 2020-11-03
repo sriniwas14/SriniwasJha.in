@@ -1,10 +1,11 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { Button, ButtonGroup, Col, Row } from 'react-bootstrap'
 import ProjectCard from './ProjectCard'
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 
 export default function ProjectScroller(props) {
     const sliderRef = useRef()
-    const [paginationVisible, setPaginationVisible] = useState(true)
+    const [paginationVisible, setPaginationVisible] = useState(false)
 
     const scrollToPosition = (direction) => {
         let sliderWidth = sliderRef.current.parentElement.scrollWidth
@@ -50,8 +51,8 @@ export default function ProjectScroller(props) {
             {
                 (props.projects.length>3 || paginationVisible) ? (<div style={{ textAlign: "center", width: "100%" }}>
                 <ButtonGroup>
-                    <Button onClick={()=> scrollToPosition("prev")}>&lt;</Button>
-                    <Button onClick={()=> scrollToPosition("next")}>&gt;</Button>
+                    <Button variant="dark" onClick={()=> scrollToPosition("prev")}><AiOutlineLeft/></Button>
+                    <Button variant="dark" onClick={()=> scrollToPosition("next")}><AiOutlineRight/></Button>
                 </ButtonGroup>
                 </div>) : ""
             }

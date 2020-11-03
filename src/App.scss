@@ -36,6 +36,7 @@ p {
   font-size: 60px;
   text-align: center;
   display: block;
+  margin-top: 14px;
   cursor: default;
 }
 
@@ -103,6 +104,12 @@ p {
   overflow: hidden;
   scroll-behavior: smooth;
   padding: 20px 0;
+  a {
+    color: unset;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .cs_ProjectCard {
@@ -110,7 +117,6 @@ p {
   border: 1px solid transparent;
   transition: 0.2s ease-out;
   border-radius: 10px;
-  cursor: pointer;
   &:hover {
     border: 1px solid;
     transition: 0.2s ease-in;

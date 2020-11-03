@@ -9,6 +9,7 @@ import {
 
 import Header from './components/elements/Header';
 import Home from './components/Home';
+import ProjectSingle from './components/ProjectSingle';
 
 function App() {
   return (
@@ -21,10 +22,12 @@ function App() {
 
         <br/>
         <Switch>
+          <Route path="/projects/:projectId">
+              <ProjectSingle />
+          </Route>
           <Route path="/">
               <Home />
           </Route>
-        
         </Switch>
 
       </div>

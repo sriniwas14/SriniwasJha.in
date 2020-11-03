@@ -1,14 +1,8 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap';
-import TextSection from './elements/TextSection';
-import ProjectScroller from './elements/ProjectScroller';
-
-
-const activeProjects = [
-    { projectId: 1, title: "Project One", description: "Lorem Ipsum dolor sit amet", badges: ["Video Game", "Godot", "GDScript"], src: "https://via.placeholder.com/350x200" },
-    { projectId: 2, title: "Project Two", description: "Lorem Ipsum dolor sit amet", badges: ["Desktop App", "Java"], src: "https://via.placeholder.com/350x200" },
-    { projectId: 3, title: "Project Three", description: "Lorem Ipsum dolor sit amet", badges: ["Web App", "ReactJs", "NodeJs"], src: "https://via.placeholder.com/350x200" },
-  ]
+import { Container, Row, Col } from 'react-bootstrap'
+import TextSection from './elements/TextSection'
+import ProjectScroller from './elements/ProjectScroller'
+import { activeProjects } from '../ApiCalls'
 
 export default function Home() {
     return (

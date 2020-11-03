@@ -4,11 +4,17 @@ import TextSection from './elements/TextSection'
 import { useParams, Link } from "react-router-dom"
 import { AiOutlineLeft, AiOutlineGithub  } from 'react-icons/ai'
 
-import { getProjectById } from '../ApiCalls'
+import { getProjectById, getSlidesById } from '../ApiCalls'
+import CustomCarousel from './elements/CustomCarousel'
 
 export default function ProjectSingle() {
     let { projectId } = useParams();
     const [project, setProject] = useState({ title: "Hola" });
+    const [slides, setSlides] = useState([])
+    
+    useEffect(() => {
+        setSlides(getSlidesById(projectId).slides)
+    })
 
 
     useEffect(() => {
@@ -32,6 +38,7 @@ export default function ProjectSingle() {
                             </div>
                         </div>
                     )}/>
+                    <CustomCarousel slides={slides} />
                 </Col>
             </Row>
         </Container>

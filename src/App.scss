@@ -19,6 +19,15 @@ html, body {
   min-height: 100%;
 }
 
+a {
+  color: white;
+  transition: 0.2s ease-out;
+  &:hover {
+    color: $primaryColor;
+    transition: 0.2s ease-in;
+  }
+}
+
 .badge-primary {
   background-color: $primaryColor !important;
 }
@@ -140,4 +149,10 @@ p {
 .cs_CarouselContainer {
   border-radius: 10px;
   overflow: hidden;
+}
+
+// Footer
+.footerLinks {
+  color: white;
+  margin: 0 10px;
 }

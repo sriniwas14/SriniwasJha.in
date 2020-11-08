@@ -152,6 +152,15 @@ p {
 }
 
 // Footer
+@media only screen and (max-width: 600px) {
+  .footerCopyrightContainer, .footerLinksContainer {
+    text-align: center !important;
+    p {
+      padding-bottom: 10px;
+    }
+  }
+}
+ 
 .footerLinks {
   color: white;
   margin: 0 10px;

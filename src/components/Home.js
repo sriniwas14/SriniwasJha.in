@@ -27,10 +27,10 @@ export default function Home() {
             <Row>
                 <Col sm={12}>
                     <TextSection variant="dark" render={(<Row>
-                        <Col sm={6} style={{ fontSize: "17px", paddingTop: "3px", cursor: "default" }}>
+                        <Col className="footerCopyrightContainer" sm={6} style={{ fontSize: "17px", paddingTop: "3px", cursor: "default" }}>
                             <p>Copyright © Sriniwas Jha</p>
                         </Col>
-                        <Col sm={6} style={{ textAlign: "right" }}>
+                        <Col className="footerLinksContainer" sm={6} style={{ textAlign: "right" }}>
                             <a className="footerLinks" href="https://www.linkedin.com/in/sriniwasj/" target="_black" rel="noreferrer"><AiOutlineLinkedin fontSize={30} /></a>
                             <a className="footerLinks" href="https://github.com/sriniwas14" target="_black" rel="noreferrer"><AiOutlineGithub fontSize={30} /></a>
                             <a className="footerLinks" href="https://twitter.com/Sriniwasj" target="_black" rel="noreferrer"><AiOutlineTwitter fontSize={30} /></a>

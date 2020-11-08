@@ -10,11 +10,7 @@ import ProjectSingleDetails from './elements/ProjectSingleDetails'
 
 export default function ProjectSingle() {
     let { projectId } = useParams();
-<<<<<<< HEAD
     const [project, setProject] = useState({ title: "", details: {} });
-=======
-    const [project, setProject] = useState({ title: "", details: [] });
->>>>>>> 81367c56307aa0c54e1869769b8ddc952434117d
     const [slides, setSlides] = useState([])
     
     useEffect(() => {
@@ -53,13 +49,9 @@ export default function ProjectSingle() {
                             </Col>
                             <Col sm={6}>
                                 <h4>Details</h4>
-<<<<<<< HEAD
                                 {
                                     Object.keys(project.details).length>0 ? (<ProjectSingleDetails details={ project.details }/>) : ""
                                 }
-=======
-                                <ProjectSingleDetails details={ project.details }/>
->>>>>>> 81367c56307aa0c54e1869769b8ddc952434117d
                             </Col>
                         </Row>
                     )} />

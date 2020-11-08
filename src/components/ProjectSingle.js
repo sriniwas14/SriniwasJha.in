@@ -6,20 +6,21 @@ import { AiOutlineLeft, AiOutlineGithub  } from 'react-icons/ai'
 
 import { getProjectById, getSlidesById } from '../ApiCalls'
 import CustomCarousel from './elements/CustomCarousel'
+import ProjectSingleDetails from './elements/ProjectSingleDetails'
 
 export default function ProjectSingle() {
     let { projectId } = useParams();
-    const [project, setProject] = useState({ title: "Hola" });
+    const [project, setProject] = useState({ title: "", details: [] });
     const [slides, setSlides] = useState([])
     
     useEffect(() => {
         setSlides(getSlidesById(projectId).slides)
-    })
+    }, [])
 
 
     useEffect(() => {
         setProject(getProjectById(projectId))
-    })
+    }, [])
 
     return (
         <Container>
@@ -34,11 +35,24 @@ export default function ProjectSingle() {
                                 <h5 style={{ textAlign: "center", margin: 0 }}>{project.title}</h5>
                             </div>
                             <div style={{ textAlign: "right" }}>
-                                <a href={ project.github } target="_blank"><AiOutlineGithub fontSize={35}/></a>
+                                <a href={ project.details.projectUrl } target="_blank" rel="noreferrer"><AiOutlineGithub fontSize={35}/></a>
                             </div>
                         </div>
                     )}/>
                     <CustomCarousel slides={slides} />
+
+                    <TextSection variant="dark" render={(
+                        <Row>
+                            <Col sm={6}>
+                                <h4>Introduction</h4>
+                                <p>{ project.introduction }</p>
+                            </Col>
+                            <Col sm={6}>
+                                <h4>Details</h4>
+                                <ProjectSingleDetails details={ project.details }/>
+                            </Col>
+                        </Row>
+                    )} />
                 </Col>
             </Row>
         </Container>

@@ -9,9 +9,15 @@
 // Variables
 
 $bodyBackground: #e5e5e5;
-$primaryColor: #ff796b;
+$primaryColor: #6bac2a;
 $sectionLightBg : #ffffff;
-$sectionDarkBg : #242a2d;
+$sectionDarkBg : #111111;
+$logoColor : #ffffff;
+$cardSubheadColor : #7a7a7a;
+
+html, body {
+  min-height: 100%;
+}
 
 .badge-primary {
   background-color: $primaryColor !important;
@@ -19,10 +25,6 @@ $sectionDarkBg : #242a2d;
 
 .bg-custom-primary {
   background-color: $primaryColor !important;
-}
-
-body {
-  background-color: $bodyBackground;
 }
 
 p {
@@ -38,20 +40,21 @@ p {
   display: block;
   margin-top: 14px;
   cursor: default;
+  color: $logoColor;
 }
 
 .cs_subhead {
   cursor: default;
   text-align: center;
   font-weight: 500;
+  color: $logoColor;
 }
 
 // Text Sections
 
 .cs_Section {
   padding: 25px;
-  border-radius: 11px;
-  box-shadow: 0 5px 10px -9px;
+  border-radius: 11px;  
   margin: 10px 0;
 
   & .cs_Headline {
@@ -67,7 +70,7 @@ p {
   &.light {
     background: $sectionLightBg;
     .cs_ProjectCard:hover {
-      border-color:#d4d4d4;
+      box-shadow: 0 0 10px 0 darken($sectionLightBg, 30%);
     }
     .cs_Headline {
       border-bottom: 1px solid #eee;
@@ -80,7 +83,7 @@ p {
     background-color: $sectionDarkBg;
     color: white;
     .cs_ProjectCard:hover {
-      border-color:#5c5c5c;
+      box-shadow: 0 0 10px 0 black;
     }
     h3,h4 {
       font-family: "Oswald";
@@ -88,7 +91,7 @@ p {
     }
     .cs_Headline {
       color: white;
-      border-bottom: 1px solid #5b5b5b;
+      border-bottom: 1px solid #353535;
     }
     .cs_Text {
       color: white;
@@ -118,12 +121,14 @@ p {
   transition: 0.2s ease-out;
   border-radius: 10px;
   &:hover {
-    border: 1px solid;
     transition: 0.2s ease-in;
     transform: scale(1.02);
   }
   img {
     border-radius: 5px;
+  }
+  p {
+    color: $cardSubheadColor;
   }
 }
 

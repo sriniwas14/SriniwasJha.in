@@ -2,6 +2,7 @@ import React,{ useEffect, useState } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import TextSection from './elements/TextSection'
 import { useParams, Link } from "react-router-dom"
+import { useSpring, animated } from 'react-spring'
 import { AiOutlineLeft, AiOutlineGithub  } from 'react-icons/ai'
 
 import { getProjectById, getSlidesById } from '../ApiCalls'
@@ -12,6 +13,8 @@ export default function ProjectSingle() {
     let { projectId } = useParams();
     const [project, setProject] = useState({ title: "", details: {} });
     const [slides, setSlides] = useState([])
+
+    const animProps = useSpring({ to: { opacity: 1, transform: 'scaleY(1)' } , from:{ opacity: 0, transform: 'scaleY(1.3)' }})
     
     useEffect(() => {
         setSlides(getSlidesById(projectId).slides)
@@ -24,6 +27,7 @@ export default function ProjectSingle() {
 
     return (
         <Container>
+            <animated.div style={animProps}>
             <Row>
                 <Col md={12}>
                     <TextSection variant="dark" render={(
@@ -57,6 +61,7 @@ export default function ProjectSingle() {
                     )} />
                 </Col>
             </Row>
+            </animated.div>
         </Container>
     )
 }

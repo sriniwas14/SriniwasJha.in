@@ -1,5 +1,6 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
+import CustomImage from './CustomImage'
 
 export default function CustomCarousel(props) {
     return (
@@ -7,7 +8,7 @@ export default function CustomCarousel(props) {
             <Carousel>
             {
                 props.slides.map(slide => (<Carousel.Item>
-                    <img src={ slide.image } alt={ slide.title }/>
+                    <CustomImage height={300} src={ slide.image } alt={ slide.title }/>
                     <Carousel.Caption>
                         <h3>{ slide.title }</h3>
                         <p>{ slide.description }</p>

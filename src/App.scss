@@ -112,6 +112,7 @@ p {
 
 .cs_ProjectScrollerSlidingArea {
   width: auto !important;
+  min-width: 100%;
   display: flex;
   overflow: hidden;
   scroll-behavior: smooth;

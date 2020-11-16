@@ -1,24 +1,20 @@
 exports.activeProjects = [
-    { projectId: "1", title: "Project One", description: "Lorem Ipsum dolor sit amet", introduction: "Lorem Ipsum dolor sit amet", badges: ["Video Game", "Godot", "GDScript"], src: "https://via.placeholder.com/350x200", details:{ platforms: ["Android", "Windows"], status: "In Development", projectUrl: "https://www.github.com", releaseDate: "TBD" } },
-    { projectId: "2", title: "Project Two", description: "Lorem Ipsum dolor sit amet", introduction: "Lorem Ipsum dolor sit amet", badges: ["Desktop App", "Java"], src: "https://via.placeholder.com/350x200", details:{ platforms: ["Android", "Windows"], status: "In Development", projectUrl: "https://www.github.com", releaseDate: "TBD" } },
-    { projectId: "3", title: "Project Three", description: "Lorem Ipsum dolor sit amet", introduction: "Lorem Ipsum dolor sit amet", badges: ["Web App", "ReactJs", "NodeJs"], src: "https://via.placeholder.com/350x200", details:{ platforms: ["Android", "Windows"], status: "In Development", projectUrl: "https://www.github.com", releaseDate: "TBD" } },
+    { projectId: "1", title: "Haskell's Quest", description: "A Roguelike-Metroidvania Game", introduction: "Follow haskell in his quest to destroy Jotnar and bring restore peace to the realm of man.", badges: ["Video Game", "Godot", "GDScript"], src: "http://www.sriniwasjha.in/assets/project_one/project_one_preview.png", details:{ platforms: ["Android", "Windows", "Linux"], status: "In Development", projectUrl: "https://www.github.com", releaseDate: "TBD" } },
+    { projectId: "2", title: "DownMann", description: "A Download Manager/Accelerator for the Gnome Desktop", introduction: "A Download Manager/Accelerator for the Gnome Desktop", badges: ["Desktop App", "Java"], src: "http://www.sriniwasjha.in/assets/project_two/project_two_preview.png", details:{ platforms: ["Linux"], status: "In Development", projectUrl: "https://www.github.com", releaseDate: "TBD" } },
+    { projectId: "3", title: "Elisa", description: "A Kanban Board Made With React and NodeJs", introduction: "A Kanban Board Made With React and NodeJs", badges: ["Web App", "ReactJs", "NodeJs"], src: "http://www.sriniwasjha.in/assets/project_three/project_three_preview.png", details:{ platforms: ["Web"], status: "In Development", projectUrl: "https://www.github.com", releaseDate: "TBD" } },
 ]
 
 exports.slides = [
     { projectId: "1", slides:[
-        { title: "First", description: "First", image: "https://via.placeholder.com/1200x400" },
-        { title: "Second", description: "Second", image: "https://via.placeholder.com/1200x400" },
-        { title: "Third", description: "Third", image: "https://via.placeholder.com/1200x400" }
+        { title: "First", description: "First", image: "http://www.sriniwasjha.in/assets/project_one/project_one_image_one.png" },
+        { title: "Second", description: "Second", image: "http://www.sriniwasjha.in/assets/project_one/project_one_image_two.png" },
+        { title: "Third", description: "Third", image: "http://www.sriniwasjha.in/assets/project_one/project_one_image_three.png" }
     ] },
     { projectId: "2", slides:[
-        { title: "First", description: "First", image: "https://via.placeholder.com/1200x400" },
-        { title: "Second", description: "Second", image: "https://via.placeholder.com/1200x400" },
-        { title: "Third", description: "Third", image: "https://via.placeholder.com/1200x400" }
+        { title: "First", description: "First", image: "http://www.sriniwasjha.in/assets/project_two/project_two_one.png" }
     ] },
     { projectId: "3", slides:[
-        { title: "First", description: "First", image: "https://via.placeholder.com/1200x400" },
-        { title: "Second", description: "Second", image: "https://via.placeholder.com/1200x400" },
-        { title: "Third", description: "Third", image: "https://via.placeholder.com/1200x400" }
+        { title: "First", description: "First", image: "http://www.sriniwasjha.in/assets/project_three/project_three_one.png" }
     ] }
 ]
 

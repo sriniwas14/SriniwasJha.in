@@ -6,7 +6,7 @@ export default function CustomImage(props) {
 
     return (
         <div>
-        <img onLoad={()=>setLoaded(true)} className={props.className} alt={props.alt} src={props.src} style={{ display: loaded ? "inherit" : "none" }}/>
+        <img onLoad={()=>setLoaded(true)} className={props.className} alt={props.alt} src={props.src} style={{ display: loaded ? "block" : "none", width: "100%" }}/>
         <Loader height={props.height} loaded={loaded}/>
         </div>        
     )

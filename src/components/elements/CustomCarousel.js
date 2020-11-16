@@ -9,10 +9,6 @@ export default function CustomCarousel(props) {
             {
                 props.slides.map(slide => (<Carousel.Item>
                     <CustomImage height={300} src={ slide.image } alt={ slide.title }/>
-                    <Carousel.Caption>
-                        <h3>{ slide.title }</h3>
-                        <p>{ slide.description }</p>
-                    </Carousel.Caption>
                 </Carousel.Item>))
             }
             </Carousel>

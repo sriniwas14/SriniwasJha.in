@@ -18,7 +18,7 @@ function Header(props) {
     }, [location])
 
     return (
-        <Navbar variant="dark">
+        <Navbar style={{ backgroundColor: "#0000009c" }} variant="dark">
             <Nav className="ml-auto">
                 {
                     routeItems.map(item => <Nav.Link active={props.currentRoute==item.route} href={item.route}>{item.label}</Nav.Link>)

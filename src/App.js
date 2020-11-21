@@ -1,11 +1,9 @@
 import './App.scss';
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  useLocation
+  Route
 } from "react-router-dom";
 
 import Header from './components/elements/Header';

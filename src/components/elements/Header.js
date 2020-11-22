@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineTwitter } from 'react-icons/ai'
 import { useLocation, withRouter } from 'react-router-dom'
 
@@ -30,7 +31,7 @@ function Header(props) {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     {
-                        routeItems.map(item => <Nav.Link active={props.currentRoute==item.route} href={item.route}>{item.label}</Nav.Link>)
+                        routeItems.map(item => <Link className={ "nav-link"+(props.currentRoute==item.route ? " active" : "") } to={item.route}>{item.label}</Link>)
                     }
                 </Nav>
             </Navbar.Collapse>

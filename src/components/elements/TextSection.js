@@ -10,6 +10,9 @@ export default function TextSection(props) {
             {
                 props.render!== undefined ? (props.render) : (<p className="cs_Text">{props.text}</p>)
             }
+            {
+                props.children
+            }
         </div>
     )
 }

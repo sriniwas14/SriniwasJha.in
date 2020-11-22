@@ -19,18 +19,21 @@ function Header(props) {
     }, [location])
 
     return (
-        <Navbar style={{ backgroundColor: "#0000009c" }} variant="dark">
+        <Navbar style={{ backgroundColor: "#0000009c" }} variant="dark" expand="lg">
             <div>
 
             <a className="footerLinks" href="https://www.linkedin.com/in/sriniwasj/" target="_black" rel="noreferrer"><AiOutlineLinkedin fontSize={30} /></a>
                                 <a className="footerLinks" href="https://github.com/sriniwas14" target="_black" rel="noreferrer"><AiOutlineGithub fontSize={30} /></a>
                                 <a className="footerLinks" href="https://twitter.com/Sriniwasj" target="_black" rel="noreferrer"><AiOutlineTwitter fontSize={30} /></a>
             </div>
-            <Nav className="ml-auto">
-                {
-                    routeItems.map(item => <Nav.Link active={props.currentRoute==item.route} href={item.route}>{item.label}</Nav.Link>)
-                }
-            </Nav>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="ml-auto">
+                    {
+                        routeItems.map(item => <Nav.Link active={props.currentRoute==item.route} href={item.route}>{item.label}</Nav.Link>)
+                    }
+                </Nav>
+            </Navbar.Collapse>
         </Navbar>
     )
 }

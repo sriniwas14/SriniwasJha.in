@@ -14,7 +14,7 @@ export default function ProjectSingle() {
     const [project, setProject] = useState({ title: "", details: {} });
     const [slides, setSlides] = useState([])
 
-    const animProps = useSpring({ to: { opacity: 1, transform: 'scaleY(1)' } , from:{ opacity: 0, transform: 'scaleY(1.3)' }})
+    const animProps = useSpring({ to: { opacity: 1, transform: 'scaleY(1)' } , from:{ opacity: 0, transform: 'scaleY(0.8)' }})
     
     useEffect(() => {
         setSlides(getSlidesById(projectId).slides)
@@ -43,6 +43,7 @@ export default function ProjectSingle() {
                             </div>
                         </div>
                     )}/>
+                    
                     <CustomCarousel slides={slides} />
 
                     <TextSection variant="dark" render={(

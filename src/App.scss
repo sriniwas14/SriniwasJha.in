@@ -47,7 +47,7 @@ p {
   font-size: 60px;
   text-align: center;
   display: block;
-  margin-top: 14px;
+  margin-top: 74px;
   cursor: default;
   color: $logoColor;
 }
@@ -154,6 +154,11 @@ p {
 
 // Footer
 @media only screen and (max-width: 600px) {
+  .chatButton {
+    width: 100%;
+    margin-bottom: 7px;
+    margin-left: 0 !important;
+  }
   .footerCopyrightContainer, .footerLinksContainer {
     text-align: center !important;
     p {

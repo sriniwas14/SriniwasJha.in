@@ -34,7 +34,6 @@ function Header(props) {
                     {
                         routeItems.map(item => <Link className={ "nav-link"+(props.currentRoute==item.route ? " active" : "") } to={item.route}>{item.label}</Link>)
                     }
-                    <Link to="/chat"><Button className="chatButton" variant="light" style={{ marginLeft: "12px" }}><FaCommentAlt/> Chat</Button></Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

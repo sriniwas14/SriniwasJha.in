@@ -20,9 +20,10 @@ function App() {
     <Router>
       <div className="App">
         <Header currentRoute={ currentRoute } setcurrentRoute={ setcurrentRoute } />
-
-        <div className="cs_brand" href="#">Sriniwas<b>Jha</b></div>
-        <div className="cs_subhead">Coder | Gamer | Geek</div>
+        <div className="cs_text_header">
+          <div className="cs_brand" href="#">Sriniwas<b>Jha</b></div>
+          <div className="cs_subhead">Coder | Gamer | Geek</div>
+        </div>
 
         <br/>
         <Switch>

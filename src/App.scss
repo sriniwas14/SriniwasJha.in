@@ -13,7 +13,8 @@ $primaryColor: #6bac2a;
 $sectionLightBg : #ffffff;
 $sectionDarkBg : #111111;
 $logoColor : #ffffff;
-$cardSubheadColor : #7a7a7a;
+$cardSubheadColor : #000000aa;
+$darkProjectCardText : #868686;
 
 html, body {
   min-height: 100%;
@@ -47,7 +48,7 @@ p {
   font-size: 60px;
   text-align: center;
   display: block;
-  margin-top: 74px;
+  margin-top: 60px;
   cursor: default;
   color: $logoColor;
 }
@@ -59,12 +60,18 @@ p {
   color: $logoColor;
 }
 
+.cs_text_header {
+  background: red;
+  padding: 50px;
+  background: #41295a;  /* fallback for old browsers */
+  background-image: url('./assets/headerbackground.jpg');
+  background-attachment: fixed;
+}
+
 // Text Sections
 
 .cs_Section {
-  padding: 25px;
-  border-radius: 11px;  
-  margin: 10px 0;
+  padding: 50px 0;
 
   & .cs_Headline {
     font-family: "Oswald";
@@ -105,6 +112,11 @@ p {
     .cs_Text {
       color: white;
     }
+    .cs_ProjectCard {
+      p {
+        color: $darkProjectCardText;
+      }
+    }
   }
 }
 
@@ -140,10 +152,6 @@ p {
   p {
     color: $cardSubheadColor;
   }
-}
-
-.cs_ProjectCard_details {
-  margin: 10px 0;
 }
 
 // CustomCarousel

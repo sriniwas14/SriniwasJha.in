@@ -9,8 +9,6 @@ export default function Footer() {
 
     return (
         <animated.div style={ animPropsFooter }>
-                <Row>
-                    <Col sm={12}>
                         <TextSection variant="dark" render={(<Row>
                             <Col className="footerCopyrightContainer" sm={6} style={{ fontSize: "17px", paddingTop: "3px", cursor: "default" }}>
                                 <p>Copyright © Sriniwas Jha</p>
@@ -21,8 +19,6 @@ export default function Footer() {
                                 <a className="footerLinks" href="https://twitter.com/Sriniwasj" target="_black" rel="noreferrer"><AiOutlineTwitter fontSize={30} /></a>
                             </Col>
                         </Row>)} />
-                    </Col>
-                </Row>
         </animated.div>
     )
 }

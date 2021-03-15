@@ -25,7 +25,6 @@ function App() {
           <div className="cs_subhead">Coder | Gamer | Geek</div>
         </div>
 
-        <br/>
         <Switch>
           <Route exact path="/projects/:projectId">
               <ProjectSingle />

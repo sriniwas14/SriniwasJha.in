@@ -1,5 +1,5 @@
 import React,{ useEffect, useState } from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Row, Col, Button } from 'react-bootstrap'
 import TextSection from './elements/TextSection'
 import { useParams, Link } from "react-router-dom"
 import { useSpring, animated } from 'react-spring'
@@ -8,6 +8,7 @@ import { AiOutlineLeft, AiOutlineGithub  } from 'react-icons/ai'
 import { getProjectById, getSlidesById } from '../ApiCalls'
 import CustomCarousel from './elements/CustomCarousel'
 import ProjectSingleDetails from './elements/ProjectSingleDetails'
+import Footer from './elements/Footer'
 
 export default function ProjectSingle() {
     let { projectId } = useParams();
@@ -26,10 +27,8 @@ export default function ProjectSingle() {
     }, [])
 
     return (
-        <Container>
+        <>
             <animated.div style={animProps}>
-            <Row>
-                <Col md={12}>
                     <TextSection variant="dark" render={(
                         <div style={{ display: "flex" }}>
                             <div xs={4}>
@@ -60,9 +59,8 @@ export default function ProjectSingle() {
                             </Col>
                         </Row>
                     )} />
-                </Col>
-            </Row>
+                    <Footer />
             </animated.div>
-        </Container>
+        </>
     )
 }

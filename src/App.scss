@@ -83,6 +83,17 @@ p {
     cursor: default;
   }
 
+  .cs_ProjectCard_details {
+    margin-top: 9px;
+  }
+
+  .customBadge {
+    margin-left: 10px;
+    &:first-of-type {
+      margin: 0 !important;
+    }
+  }
+
   &.light {
     background: $sectionLightBg;
     .cs_ProjectCard:hover {

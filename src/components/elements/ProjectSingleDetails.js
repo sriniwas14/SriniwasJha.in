@@ -13,7 +13,7 @@ export default function ProjectSingleDetails(props) {
             <div>
                 <span style={localStyle.label}>Platforms : </span>
                 {
-                    props.details.platforms.map(platform => <Badge pill variant="primary">{platform}</Badge> )
+                    props.details.platforms.map(platform => <Badge className="customBadge" pill variant="primary">{platform}</Badge> )
                 }
             </div>
             <div>

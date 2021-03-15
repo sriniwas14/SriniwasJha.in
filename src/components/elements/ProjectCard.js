@@ -10,7 +10,7 @@ export default function ProjectCard(props) {
                 <CustomImage height={200} alt={props.project.description} className="img-fluid" src={props.project.src} />
                 <div className="cs_ProjectCard_details">
                     {
-                        props.project.badges.map(badge => <Badge pill variant="primary">{badge}</Badge> )
+                        props.project.badges.map(badge => <Badge pill className="customBadge" variant="primary">{badge}</Badge> )
                     }
                 </div>
                 <h4>{props.project.title}</h4>

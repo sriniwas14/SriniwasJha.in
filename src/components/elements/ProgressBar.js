@@ -5,7 +5,7 @@ export default function ProgressBar(props) {
         <div>
             <div className="cs_progressBar">
                 <div style={{ width: `${props.value}%` }} className="cs_progressBarValue">
-                    <text>{ props.innerText }</text>
+                    <span>{ props.innerText }</span>
                 </div>
             </div>
         </div>

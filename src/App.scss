@@ -92,6 +92,7 @@ p {
 
 .cs_headerBar {
   background-color: black;
+  border-bottom: 3px solid $primaryColor;
   padding: 0;
   .nav-link {
     padding: 17px 27px !important;

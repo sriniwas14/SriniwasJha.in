@@ -60,7 +60,11 @@ export default function Home() {
                 </TextSection>
             </animated.div>
             <animated.div style={ animPropsAboutMe}>
-                <TextSection heading="3D Models" render={(<ProjectScroller projects={activeProjects} />)} />
+                <TextSection>
+                    <div style={{ display: "flex" }}>
+                        <img style={{ margin: "auto" }} src="http://ghchart.rshah.org/sriniwas14" alt="Sriniwas' Github History" />
+                    </div>
+                </TextSection>
             </animated.div>
             <Footer />
         </>

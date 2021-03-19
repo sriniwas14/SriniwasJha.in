@@ -26,7 +26,7 @@ function Header(props) {
   return (
     <Navbar
       fixed="top"
-      style={{ backgroundColor: "#000000", backdropFilter: "blur(9px)" }}
+      className="cs_headerBar"
       variant="dark"
       expand="lg"
     >

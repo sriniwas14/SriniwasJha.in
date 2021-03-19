@@ -1,6 +1,6 @@
 // Web Imports
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@100;300;400&display=swap');
 
 
 // Local Imports
@@ -10,14 +10,21 @@
 
 $bodyBackground: #e5e5e5;
 $primaryColor: #6bac2a;
+$secondaryColor: #F2F2F2;
 $sectionLightBg : #ffffff;
 $sectionDarkBg : #111111;
-$logoColor : #ffffff;
+$logoColor : #000000;
+$taglineColor : #444;
 $cardSubheadColor : #000000aa;
 $darkProjectCardText : #868686;
 
 html, body {
   min-height: 100%;
+}
+
+h1, h2 {
+  font-family: "Oswald";
+  font-weight: 100;
 }
 
 a {
@@ -57,15 +64,23 @@ p {
   cursor: default;
   text-align: center;
   font-weight: 500;
-  color: $logoColor;
+  color: $taglineColor;
 }
 
 .cs_text_header {
-  background: red;
+  background: $secondaryColor;
   padding: 50px;
-  background: #41295a;  /* fallback for old browsers */
-  background-image: url('./assets/headerbackground.jpg');
-  background-attachment: fixed;
+}
+
+.cs_headerBar {
+  background-color: black;
+  padding: 0;
+  .nav-link {
+    padding: 17px 27px !important;
+    &.active {
+      background: $primaryColor;
+    }
+  }
 }
 
 // Text Sections

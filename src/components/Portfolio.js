@@ -16,7 +16,7 @@ export default function Portfolio() {
     return (
         <>
             <animated.div style={ animPropsAboutMe}>
-                        <TextSection render={(
+                        <TextSection className="cs_homeHeader" render={(
                             <div style={{ display: "flex" }}>
                                 <div style={{ padding: "7px 10px", cursor: "default", width: "100%" }}>
                                     <h2 style={{ fontFamily: "oswald" }}>Portfolio</h2>
@@ -24,10 +24,13 @@ export default function Portfolio() {
                                 </div>
                             </div>
                         )}/>
-                        <TextSection variant="dark" heading="Programming" render={(<ProjectScroller projects={activeProjects} />)} />
+                        <TextSection variant="dark" heading="Web Applications" render={(<ProjectScroller projects={activeProjects} />)} />
             </animated.div>
             <animated.div style={ animPropsAboutMe}>
-                        <TextSection heading="3D Models" render={(<ProjectScroller projects={activeProjects} />)} />
+                        <TextSection heading="Mobile Applications" render={(<ProjectScroller projects={activeProjects} />)} />
+            </animated.div>
+            <animated.div style={ animPropsAboutMe}>
+                        <TextSection heading="Video Games" variant="dark" render={(<ProjectScroller projects={activeProjects} />)} />
             </animated.div>
             <Footer />
         </>

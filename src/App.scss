@@ -168,12 +168,9 @@ p {
 // Project Scroller and Card
 
 .cs_ProjectScrollerSlidingArea {
-  width: auto !important;
-  min-width: 100%;
-  display: flex;
-  overflow: hidden;
   scroll-behavior: smooth;
   padding: 20px 0;
+  width: 100%;
   a {
     color: unset;
     &:hover {
@@ -225,6 +222,10 @@ p {
   margin: 0 10px;
 }
 
+.cs_footer {
+  border-top: 3px solid $primaryColor;
+}
+
 // Home Page
 .cs_homeHeader {
   padding:60px 0;
@@ -241,6 +242,10 @@ p {
     padding: 12px;
     .navbar-toggler {
       color: $primaryColor;
+    }
+
+    .nav-link:first-child {
+      margin-top: 21px;
     }
   }
 }

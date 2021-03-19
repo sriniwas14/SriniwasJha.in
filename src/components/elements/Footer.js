@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import TextSection from '../elements/TextSection'
 import { AiOutlineLinkedin, AiOutlineGithub, AiOutlineTwitter  } from 'react-icons/ai'
 
@@ -9,7 +9,7 @@ export default function Footer() {
 
     return (
         <animated.div style={ animPropsFooter }>
-                        <TextSection variant="dark" render={(<Row>
+                        <TextSection className="cs_footer" variant="dark" render={(<Row>
                             <Col className="footerCopyrightContainer" sm={6} style={{ fontSize: "17px", paddingTop: "3px", cursor: "default" }}>
                                 <p>Copyright © Sriniwas Jha</p>
                             </Col>

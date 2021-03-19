@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {
@@ -10,6 +10,8 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useLocation, withRouter } from "react-router-dom";
 
 function Header(props) {
+  const [expanded, setExpanded] = useState(false)
+
   var routeItems = [
     //Route:Label
     { route: "/", label: "Home" },
@@ -21,6 +23,7 @@ function Header(props) {
 
   useEffect(() => {
     props.setcurrentRoute(location.pathname);
+    setExpanded(false)
   }, [location]);
 
   return (
@@ -28,7 +31,9 @@ function Header(props) {
       fixed="top"
       className="cs_headerBar"
       variant="dark"
+      collapseOnSelect={true}
       expand="lg"
+      expanded={expanded}
     >
       <div>
         <a
@@ -58,6 +63,7 @@ function Header(props) {
       </div>
       <Navbar.Toggle
         children={<AiOutlineMenu />}
+        onClick={() => setExpanded(expanded ? false : "expanded") }
         aria-controls="basic-navbar-nav"
       />
       <Navbar.Collapse id="basic-navbar-nav">
@@ -67,7 +73,7 @@ function Header(props) {
               key={routeItems.label}
               style={{ padding: "10px 20px" }}
               className={
-                "nav-link" +
+                "nav-link " +
                 (props.currentRoute === item.route ? " active" : "")
               }
               to={item.route}

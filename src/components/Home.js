@@ -62,7 +62,7 @@ export default function Home() {
             <animated.div style={ animPropsAboutMe}>
                 <TextSection>
                     <div style={{ display: "flex" }}>
-                        <img style={{ margin: "auto" }} src="http://ghchart.rshah.org/sriniwas14" alt="Sriniwas' Github History" />
+                        <img style={{ margin: "auto", width: "100%", height: "auto" }} src="http://ghchart.rshah.org/sriniwas14" alt="Sriniwas' Github History" />
                     </div>
                 </TextSection>
             </animated.div>

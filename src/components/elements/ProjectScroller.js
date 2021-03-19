@@ -44,7 +44,7 @@ export default function ProjectScroller(props) {
         <Row>
             <div ref={sliderRef} className="cs_ProjectScrollerSlidingArea">
             {
-                props.projects.map(project=> (<Col xs={12} sm={4}><ProjectCard project={project} /></Col>))
+                props.projects.map(project=> (<Col sm={12}><ProjectCard project={project} /></Col>))
             }
             </div>
 

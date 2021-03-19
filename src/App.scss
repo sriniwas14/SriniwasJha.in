@@ -13,8 +13,8 @@ $primaryColor: #6bac2a;
 $secondaryColor: #F2F2F2;
 $sectionLightBg : #ffffff;
 $sectionDarkBg : #111111;
-$logoColor : #000000;
-$taglineColor : #444;
+$logoColor : #FFFFFF;
+$taglineColor : #9b9b9b;
 $cardSubheadColor : #000000aa;
 $darkProjectCardText : #868686;
 
@@ -22,9 +22,27 @@ html, body {
   min-height: 100%;
 }
 
+// Elements
+
 h1, h2 {
   font-family: "Oswald";
   font-weight: 100;
+}
+
+.cs_progressBar {
+  width: 100%;
+  background: #2c2c2c;
+  border-radius: 10px;
+  margin: 10px 0;
+  .cs_progressBarValue {
+    background: $primaryColor;
+    padding: 2px;
+    text-align: center;
+    border-radius: 10px;
+    text {
+      color: white;
+    }
+  }
 }
 
 a {
@@ -68,7 +86,7 @@ p {
 }
 
 .cs_text_header {
-  background: $secondaryColor;
+  background: $sectionDarkBg;
   padding: 50px;
 }
 
@@ -208,8 +226,7 @@ p {
 
 // Home Page
 .cs_homeHeader {
-  padding:7% 0;
-  text-align: center;
+  padding:60px 0;
   background: linear-gradient(to right, #076585, #00cfff) !important;
   color: white;
 }

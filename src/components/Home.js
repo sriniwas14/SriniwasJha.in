@@ -1,12 +1,13 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { useSpring, animated } from 'react-spring';
+import { useSpring, animated } from 'react-spring'
 
+import WelcomeImage from '../assets/welcome.svg'
 import TextSection from './elements/TextSection'
 import ProjectScroller from './elements/ProjectScroller'
 import { activeProjects } from '../ApiCalls'
 
-import Footer from './elements/Footer';
+import Footer from './elements/Footer'
 
 
 
@@ -17,8 +18,13 @@ export default function Home() {
     return (
         <>
             <animated.div style={animPropsAboutMe}>
-                <TextSection heading="About Me">
-                    <p>Hello There! It's me Sriniwas, I've been tinkering with computers since I was a kid and because of that I have earned a deep understanding of it various functions. </p>
+                <TextSection className="cs_homeHeader">
+                    <Col sm={12} style={{ display: "flex" }}>
+                        <div style={{ width: "100%", margin: "auto" }}>
+                            <h1>Hello There! 😀</h1>
+                            <p>Scroll Down to learn more about me</p>
+                        </div>
+                    </Col>
                 </TextSection>
             </animated.div>
             <animated.div style={ animPropsAboutMe}>

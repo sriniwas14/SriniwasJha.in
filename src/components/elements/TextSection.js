@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 
 export default function TextSection(props) {
     return (
-        <div className={"cs_Section "+(props.variant==='dark' ? "dark" : "light")}>
+        <div className={`cs_Section ${props.variant==='dark' ? "dark" : "light"} ${props.className}`}>
             <Container>
                 <Row>
                     <Col sm={12}>

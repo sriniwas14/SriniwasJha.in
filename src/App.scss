@@ -205,3 +205,24 @@ p {
   color: white;
   margin: 0 10px;
 }
+
+// Home Page
+.cs_homeHeader {
+  padding:7% 0;
+  text-align: center;
+  background: linear-gradient(to right, #076585, #00cfff) !important;
+  color: white;
+}
+
+// Responsive
+@media only screen and (max-width: 991px) {
+  .container {
+    max-width: 920px !important;
+  }
+  .cs_headerBar {
+    padding: 12px;
+    .navbar-toggler {
+      color: $primaryColor;
+    }
+  }
+}

@@ -3,6 +3,7 @@ import Loader from './Loader'
 
 export default function CustomImage(props) {
     const [loaded, setLoaded] = useState(false)
+    console.log("IMAGE ", props.src)
 
     return (
         <div>

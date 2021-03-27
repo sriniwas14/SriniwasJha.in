@@ -4,9 +4,7 @@ import { useSpring, animated } from 'react-spring';
 import TextSection from './elements/TextSection'
 import ProjectScroller from './elements/ProjectScroller'
 import { activeProjects } from '../ApiCalls'
-
 import Footer from './elements/Footer';
-
 
 
 export default function Portfolio() {

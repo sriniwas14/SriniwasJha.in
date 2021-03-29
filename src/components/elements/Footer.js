@@ -11,7 +11,7 @@ export default function Footer() {
         <animated.div style={ animPropsFooter }>
                         <TextSection className="cs_footer" variant="dark" render={(<Row>
                             <Col className="footerCopyrightContainer" sm={6} style={{ fontSize: "17px", paddingTop: "3px", cursor: "default" }}>
-                                <p>Copyright © Sriniwas Jha</p>
+                                <p>Made With React by Sriniwas</p>
                             </Col>
                             <Col className="footerLinksContainer" sm={6} style={{ textAlign: "right" }}>
                                 <a className="footerLinks" href="https://www.linkedin.com/in/sriniwasj/" target="_black" rel="noreferrer"><AiOutlineLinkedin fontSize={30} /></a>

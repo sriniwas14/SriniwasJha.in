@@ -264,3 +264,38 @@ p {
     background-color: darken($primaryColor, 10%) !important;
   }
 }
+
+// Contact
+.customForm {
+  input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 0px;
+    font-family: Roboto;
+    outline: none;
+  }
+
+  input {
+    color: white;
+    background-color: lighten($sectionDarkBg, 10%);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: 0.2s ease-in;
+    &:focus {
+      border: 1px solid $primaryColor;
+      transition: 0.2s ease-out;
+    }
+  }
+
+  button {
+    background-color: $primaryColor !important;
+    color: white;
+    transition: 0.2s ease-out;
+    &:hover {
+      background-color: darken($primaryColor, 10%) !important;
+      transition: 0.2s ease-in;
+    }
+  }
+}

@@ -7,7 +7,7 @@ export default function ProjectScroller(props) {
     return (
         <Row className="cs_ProjectRow">
             {
-                props.projects.map(project=> (<Col sm={6}><ProjectCard project={project} /></Col>))
+                props.projects.map(project => (<Col sm={6}><ProjectCard project={project} /></Col>))
             }            
         </Row>
     )

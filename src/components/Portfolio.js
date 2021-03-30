@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 
 import TextSection from './elements/TextSection'
 import ProjectScroller from './elements/ProjectScroller'
-import { activeProjects } from '../ApiCalls'
+import { activeProjects, activeGames } from '../ApiCalls'
 import Footer from './elements/Footer';
 
 
@@ -22,13 +22,10 @@ export default function Portfolio() {
                                 </div>
                             </div>
                         )}/>
-                        <TextSection variant="dark" heading="Web Applications" render={(<ProjectScroller projects={activeProjects} />)} />
+                        <TextSection variant="dark" heading="Web Applications" render={(<ProjectScroller projects={activeProjects.slice(0,2)} />)} />
             </animated.div>
-            <animated.div style={ animPropsAboutMe}>
-                        <TextSection heading="Mobile Applications" render={(<ProjectScroller projects={activeProjects} />)} />
-            </animated.div>
-            <animated.div style={ animPropsAboutMe}>
-                        <TextSection heading="Video Games" variant="dark" render={(<ProjectScroller projects={activeProjects} />)} />
+            <animated.div style={ animPropsAboutMe }>
+                        <TextSection heading="Video Games" render={(<ProjectScroller fromIndex={3} projects={activeProjects.slice(2)} />)} />
             </animated.div>
             <Footer />
         </>
